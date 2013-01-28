@@ -36,12 +36,12 @@ set     status_format="-%r- %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:
 set folder_format="%2C %t %3N %F %2l %-8.8u %-8.8g %8s %d %f"
 
 # fix forward and back
-bind    generic           next-page       # stomped on 'forget pgp passphrase'
-bind    index             next-page
-bind    pager             next-page
-bind    generic           previous-page   # stomped on urlview
-bind    index             previous-page
-bind    pager             previous-page
+bind    generic \Cf         next-page       # stomped on 'forget pgp passphrase'
+bind    index   \Cf         next-page
+bind    pager   \Cf         next-page
+bind    generic \Cb         previous-page   # stomped on urlview
+bind    index   \Cb         previous-page
+bind    pager   \Cb         previous-page
 bind    generic b           previous-page   # stomped on bounce
 bind    index   b           previous-page
 bind    pager   b           previous-page
@@ -53,7 +53,7 @@ bind    index   p           previous-unread # replaced print-message
 bind    pager   p           previous-unread
 
 # fix previous-line
-bind    pager             previous-line
+bind    pager   \Ch         previous-line
 
 # fix backwards search and help
 bind    generic ?           search-reverse  # stomped on 'help'

@@ -25,9 +25,9 @@ let python_highlight_all=1              " extended Python highlighting
 cscope add ${HOME}/work/cscope.out
 nmap <C-\>s :cscope find s <C-R>=expand("<cword>")<CR><CR>
 
-autocmd BufRead /tmp/mutt* normal :g/^> -- $/-1,/^$/-1d
 autocmd BufRead /tmp/mutt* setlocal spell
 autocmd BufRead /tmp/mutt* setlocal textwidth=72
+autocmd BufRead /tmp/mutt* silent :g/^> -- $/-1,/^$/-1d
 
 autocmd BufRead .git/COMMIT_EDITMSG setlocal spell
 autocmd BufRead .git/COMMIT_EDITMSG setlocal textwidth=70
