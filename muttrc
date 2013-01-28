@@ -1,0 +1,91 @@
+# Andrew Gaul's .muttrc
+
+source $HOME/dotfiles/muttrc-home               # default to home
+
+# allow switching accounts
+# from http://www.df7cb.de/blog/2010/Using_multiple_IMAP_accounts_with_Mutt.html
+macro index <f2> '<enter-command>source ~/dotfiles/muttrc-home<enter><change-folder>!<enter>'
+macro index <f3> '<enter-command>source ~/dotfiles/muttrc-maginatics<enter><change-folder>!<enter>'
+
+# server-specific settings
+set     imap_idle=yes                       # enable push email
+set     imap_servernoise=no
+set     mail_check=60
+set     timeout=60
+
+# general settings
+set     ascii_chars=yes                     # use only simple ASCII art
+set     help=no                             # remove top help line
+set     mark_old=no
+set     markers=no                          # no end of line markers
+set     move=no
+set     quit=ask-yes                        # confirm before quitting
+set     sort=threads
+set     sort_aux=date
+set     wait_key=no                         # wait after successful pipe command
+
+# non-cluttered index format:
+# ### flg From                Subject
+set     index_format="%4C %Z %-18.18L  %s"
+
+# index status line
+set     status_format="-%r- %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b? Size:%?l?%l?] %|-"
+
+# browser folder format
+# http://www.mutt.org/doc/devel/manual.html#folder-format
+set folder_format="%2C %t %3N %F %2l %-8.8u %-8.8g %8s %d %f"
+
+# fix forward and back
+bind    generic           next-page       # stomped on 'forget pgp passphrase'
+bind    index             next-page
+bind    pager             next-page
+bind    generic           previous-page   # stomped on urlview
+bind    index             previous-page
+bind    pager             previous-page
+bind    generic b           previous-page   # stomped on bounce
+bind    index   b           previous-page
+bind    pager   b           previous-page
+
+# fix next and previous unread message
+bind    index   n           next-unread
+bind    pager   n           next-unread
+bind    index   p           previous-unread # replaced print-message
+bind    pager   p           previous-unread
+
+# fix previous-line
+bind    pager             previous-line
+
+# fix backwards search and help
+bind    generic ?           search-reverse  # stomped on 'help'
+bind    pager   ?           search-reverse
+bind    generic H           help
+bind    pager   H           help
+
+# remove annoying bindings
+bind    generic x           noop            # exits without confirmation
+bind    index   x           noop
+bind    pager   x           noop
+bind    generic Z           noop
+bind    generic z           noop
+bind    pager   -           noop
+
+# make colors readable (sourced from Ubuntu 12.04 /etc/Muttrc.d/colors.rc)
+color normal        default         default
+color attachment    brightyellow    default
+color hdrdefault    cyan            default
+color indicator     black           cyan
+color markers	    brightred       default
+color quoted	    green           default
+color signature     cyan            default
+color status	    brightgreen     blue
+color tilde	        blue            default
+color tree	        red             default
+
+# set message limits
+folder-hook =sent-mail push "<limit>~A<enter>"     # show all
+folder-hook .          push "<limit>~F|~N<enter>"  # show flagged and new
+
+# header fields
+ignore *
+unignore  from: subject to cc date
+hdr_order from: subject to cc date

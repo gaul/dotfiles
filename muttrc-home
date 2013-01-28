@@ -1,0 +1,32 @@
+# Andrew Gaul's .muttrc for personal mail
+
+# server-specific settings
+set from="andrew@gaul.org"
+set folder="imaps://gaul@gaul.org"
+set smtp_url="smtps://relay.pair.com"
+set record="=sent-mail"
+set spoolfile="=INBOX"
+set certificate_file="~/dotfiles/muttrc-home-certificates"
+set postponed="~/dotfiles/muttrc-home-postponed"
+set signature="~/dotfiles/muttrc-home-signature"
+set header_cache="/tmp/mutt_headers/"
+
+mailboxes \
+    =INBOX \
+    =bulk \
+    =github \
+    =guava-discuss \
+    =h2-database \
+    =jclouds \
+    =jclouds-dev \
+    =mutt-dev \
+    =rss \
+    =sent-mail \
+    =static-analysis \
+    =valgrind-devel \
+    =valgrind-users \
+    =zlib-devel
+
+# Google contacts (manually update with goobook reload)
+set query_command="goobook query '%s'"
+bind editor <TAB> complete-query
