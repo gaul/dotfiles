@@ -1,0 +1,12 @@
+[user]
+	name = Andrew Gaul
+	email = andrew@gaul.org
+
+[color]
+	status=auto
+	branch=auto
+	interactive=auto
+	diff=auto
+
+[alias]
+	branch-sorted-by-date=for-each-ref --sort='committerdate' --format="%(refname:short)" refs/heads/
