@@ -21,7 +21,7 @@ set     markers=no                          # no end of line markers
 set     move=no
 set     quit=ask-yes                        # confirm before quitting
 set     sort=threads
-set     sort_aux=date
+set     sort_aux=last-date-received
 set     wait_key=no                         # wait after successful pipe command
 
 # non-cluttered index format:
