@@ -18,7 +18,10 @@ mailboxes \
     =guava-discuss \
     =h2-database \
     =jclouds \
+    =jclouds-commits \
     =jclouds-dev \
+    =jclouds-issues \
+    =jclouds-private \
     =mutt-dev \
     =rss \
     =sent-mail \
@@ -26,6 +29,8 @@ mailboxes \
     =valgrind-devel \
     =valgrind-users \
     =zlib-devel
+
+folder-hook =jclouds* set from="gaul@apache.org"
 
 # Google contacts (manually update with goobook reload)
 set query_command="goobook query '%s'"
