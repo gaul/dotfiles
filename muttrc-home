@@ -25,7 +25,6 @@ mailboxes \
     =mutt-dev \
     =rss \
     =sent-mail \
-    =static-analysis \
     =valgrind-devel \
     =valgrind-users \
     =zlib-devel
