@@ -13,9 +13,9 @@ set ruler                               " show location of cursor
 set shiftwidth=4                        " number of spaces for >>
 set showcmd                             " show information about commands
 set showmatch                           " show [({})] matches
-set spellfile=${HOME}/.spellfile.add    " spell checking
+set spellfile=~/.spellfile.add          " spell checking
 set tabstop=4                           " number of spaces for tab indents
-set tags=${HOME}/work/tags
+set tags=~/work/tags                    " tags for navigating source code
 set wildignore+=*.class,*.o,*.pdf,*.pyc " ignore binary files in tab complete
 
 let c_space_errors=1                    " highlight trailing whitespace
