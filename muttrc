@@ -35,6 +35,9 @@ set     status_format="-%r- %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:
 # http://www.mutt.org/doc/devel/manual.html#folder-format
 set folder_format="%2C %t %3N %F %2l %-8.8u %-8.8g %8s %d %f"
 
+auto_view text/html
+alternative_order text/plain text/html
+
 # fix forward and back
 bind    generic \Cf         next-page       # stomped on 'forget pgp passphrase'
 bind    index   \Cf         next-page
