@@ -88,7 +88,7 @@ mvn_checkstyle() {
 
 # compact time replacement
 tinytime() {
-    /usr/bin/time -f 'total: %E sys: %S user: %U' $*
+    /usr/bin/time -f 'total: %E user: %U sys: %S' $*
 }
 
 ulimit -c unlimited
