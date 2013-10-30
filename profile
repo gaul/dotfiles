@@ -77,10 +77,6 @@ mount_private() {
 mvn_checkstyle() {
     mvn checkstyle:checkstyle \
         --quiet \
-        -Dcheckstyle.enable.files.summary=false \
-        -Dcheckstyle.enable.rules.summary=false \
-        -Dcheckstyle.enable.severity.summary=false \
-        -Dcheckstyle.enable.rss=false \
         -Dcheckstyle.output.file=/dev/stdout \
         -Dcheckstyle.output.format=plain \
         $*
