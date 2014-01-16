@@ -21,14 +21,12 @@ mailboxes \
     =jclouds \
     =jclouds-commits \
     =jclouds-dev \
-    =jclouds-issues \
+    =jclouds-notifications \
     =jclouds-private \
-    =mutt-dev \
-    =rss \
+    =mutability-detector \
     =sent-mail \
-    =valgrind-devel \
-    =valgrind-users \
-    =zlib-devel
+    =thrift \
+    =thrift-dev
 
 folder-hook =jclouds* set from="gaul@apache.org"
 
