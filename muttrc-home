@@ -28,7 +28,9 @@ mailboxes \
     =thrift \
     =thrift-dev
 
-folder-hook =jclouds* set from="gaul@apache.org"
+folder-hook imaps://gaul@gaul.org/* source ~/dotfiles/muttrc-home
+folder-hook imaps://gaul@gaul.org/jclouds* set from="gaul@apache.org"
+folder-hook imaps://gaul@gaul.org/thrift* set from="gaul@apache.org"
 
 # Google contacts (manually update with goobook reload)
 set query_command="goobook query '%s'"
