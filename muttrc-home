@@ -9,7 +9,8 @@ set spoolfile="=INBOX"
 set certificate_file="~/dotfiles/muttrc-home-certificates"
 set postponed="~/dotfiles/muttrc-home-postponed"
 set signature="~/dotfiles/muttrc-home-signature"
-set header_cache="/tmp/mutt_headers/"
+set header_cache="/tmp/mutt_cache/"
+set message_cachedir = "/tmp/mutt_cache/"
 
 mailboxes \
     =INBOX \
