@@ -4,7 +4,8 @@
 export BROWSER="google-chrome"
 export DOGFOOD="/tmp/mountpoint"
 export EDITOR="vim"
-export GREP_OPTIONS="--color=auto --exclude=\*.svn-base --exclude=Entries"
+export GREP_OPTIONS="--binary-files=without-match --color=auto \
+        --exclude=\*.svn-base --exclude=Entries"
 export JAVA_HOME="$HOME/bin/jdk"
 export LESS="--IGNORE-CASE --RAW-CONTROL-CHARS"
 export MAILER="mutt"
