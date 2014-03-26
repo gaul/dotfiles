@@ -64,8 +64,9 @@ genpwd() {
 
 mount_gaulbackup() {
     s3fs gaulbackup "${HOME}/gaulbackup" \
-        -ouse_rrs=1 \
-        -opasswd_file="${HOME}/private/.passwd-s3fs"
+        -o enable_content_md5 \
+        -o passwd_file="${HOME}/private/.passwd-s3fs" \
+        -o url=https://s3.amazonaws.com
 }
 
 # mount private encrypted directory
