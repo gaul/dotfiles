@@ -17,19 +17,20 @@ mailboxes \
     =bulk \
     =github \
     =guava-discuss \
-    =h2-database \
+    =innodb-ruby \
     =jclouds \
     =jclouds-commits \
     =jclouds-dev \
     =jclouds-notifications \
     =jclouds-private \
+    =mentors \
     =mutability-detector \
-    =sent-mail \
-    =thrift \
-    =thrift-dev
+    =mysql-innodb \
+    =sent-mail
 
 folder-hook imaps://gaul@gaul.org/* source ~/dotfiles/muttrc-home
 folder-hook imaps://gaul@gaul.org/jclouds* set from="gaul@apache.org"
+folder-hook imaps://gaul@gaul.org/mentors set from="gaul@apache.org"
 folder-hook imaps://gaul@gaul.org/thrift* set from="gaul@apache.org"
 
 # Google contacts (manually update with goobook reload)
