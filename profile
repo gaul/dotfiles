@@ -53,7 +53,7 @@ flv_to_mp4() {
 }
 
 fvim() {
-    vim $(find -name "$1")
+    vim $(find . -name "$1")
 }
 
 # generate a random password excluding characters which look similar
