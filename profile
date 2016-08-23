@@ -58,7 +58,7 @@ fvim() {
 
 # generate a random password excluding characters which look similar
 genpwd() {
-    tr -cd 'A-Za-z0-9' < /dev/urandom | tr -d '0O1lI5S6G8B' | head -c 8
+    LC_ALL=C tr -cd 'A-Za-z0-9' < /dev/urandom | tr -d '0O1lI5S6G8B' | head -c 8
     echo
 }
 
