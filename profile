@@ -1,7 +1,7 @@
 #!/bin/bash
 # Andrew Gaul's bash .profile
 
-export BROWSER="google-chrome"
+export BROWSER="firefox"
 export EDITOR="vim"
 export GREP_OPTIONS="--binary-files=without-match --color=auto \
         --exclude=\*.svn-base --exclude=Entries"
