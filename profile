@@ -3,6 +3,8 @@
 
 export BROWSER="firefox"
 export EDITOR="vim"
+# TODO: change work/go-workspace/ to work/ ?
+export GOPATH="$HOME/work/go-workspace"
 export GREP_OPTIONS="--binary-files=without-match --color=auto \
         --exclude=\*.svn-base --exclude=Entries"
 export JAVA_HOME="$HOME/bin/jdk"
@@ -10,7 +12,7 @@ export LESS="--IGNORE-CASE --RAW-CONTROL-CHARS"
 export MAILER="mutt"
 export NNTPSERVER="reader443.eternal-september.org"
 export PAGER="less"
-export PATH="${HOME}/bin:${JAVA_HOME}/bin:${PATH}"
+export PATH="${HOME}/bin:${JAVA_HOME}/bin:/usr/local/go/bin:$GOPATH/bin:${PATH}"
 export WWW_HOME="http://google.com/"
 
 alias ls="ls --color=auto"
@@ -62,10 +64,16 @@ genpwd() {
 }
 
 mount_gaulbackup() {
-    s3fs gaulbackup "${HOME}/gaulbackup" \
-        -o enable_content_md5 \
-        -o passwd_file="${HOME}/private/.passwd-s3fs" \
-        -o url=https://s3.amazonaws.com
+    goofys \
+        --storage-class=STANDARD_IA \
+        gaulbackup "${HOME}/gaulbackup"
+}
+
+mount_gaulwww() {
+    goofys \
+        --acl public-read \
+        --use-content-type \
+        gaulwww "${HOME}/gaulwww"
 }
 
 # mount private encrypted directory
