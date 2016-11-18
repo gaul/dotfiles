@@ -2,7 +2,6 @@
 # Andrew Gaul's bash .profile
 
 export BROWSER="google-chrome"
-export DOGFOOD="/tmp/mountpoint"
 export EDITOR="vim"
 export GREP_OPTIONS="--binary-files=without-match --color=auto \
         --exclude=\*.svn-base --exclude=Entries"
