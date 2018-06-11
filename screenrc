@@ -6,3 +6,4 @@ bind K kill
 bind k
 bind ^K
 bind ^G
+bind d      # ^D instead
