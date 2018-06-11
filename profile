@@ -5,8 +5,6 @@ export BROWSER="firefox"
 export EDITOR="vim"
 # TODO: change work/go-workspace/ to work/ ?
 export GOPATH="$HOME/work/go-workspace"
-export GREP_OPTIONS="--binary-files=without-match --color=auto \
-        --exclude=\*.svn-base --exclude=Entries"
 export JAVA_HOME="$HOME/bin/jdk"
 export LESS="--IGNORE-CASE --RAW-CONTROL-CHARS"
 export MAILER="mutt"
@@ -15,6 +13,7 @@ export PAGER="less"
 export PATH="${HOME}/bin:${JAVA_HOME}/bin:/usr/local/go/bin:$GOPATH/bin:${PATH}"
 export WWW_HOME="http://google.com/"
 
+alias grep="grep --binary-files=without-match --color=auto --exclude=\*.svn-base --exclude=Entries --exclude-dir=.mypy_cache"
 alias ls="ls --color=auto"
 alias mvn="mvn --quiet"
 alias pmake="make --jobs=$(($(grep --count ^processor /proc/cpuinfo) + 1))"
