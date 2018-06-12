@@ -39,6 +39,9 @@ highlight Folded ctermbg=black ctermfg=darkgray
 
 syntax on
 
+" disable ex mode
+map Q <Nop>
+
 " c-space inserts a NUL which repeats text from last insert:
 " http://www.shallowsky.com/blog/linux/editors/vim-ctrl-space.html
 imap <Nul> <Space>
