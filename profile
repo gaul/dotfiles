@@ -64,6 +64,7 @@ genpwd() {
 mount_gaulbackup() {
     goofys \
         --storage-class=STANDARD_IA \
+        --cheap \
         gaulbackup "${HOME}/gaulbackup"
 }
 
