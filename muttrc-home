@@ -14,6 +14,7 @@ set message_cachedir = "/tmp/mutt_cache/"
 
 mailboxes \
     =INBOX \
+    =apache \
     =bulk \
     =github \
     =guava-discuss \
@@ -23,15 +24,15 @@ mailboxes \
     =jclouds-dev \
     =jclouds-notifications \
     =jclouds-private \
-    =mentors \
     =mutability-detector \
     =mysql-innodb \
     =sent-mail
 
 folder-hook imaps://gaul@gaul.org/* source ~/dotfiles/muttrc-home
+folder-hook imaps://gaul@gaul.org/apache set from="gaul@apache.org"
 folder-hook imaps://gaul@gaul.org/jclouds* set from="gaul@apache.org"
-folder-hook imaps://gaul@gaul.org/mentors set from="gaul@apache.org"
-folder-hook imaps://gaul@gaul.org/thrift* set from="gaul@apache.org"
+folder-hook imaps://gaul@gaul.org/apache set smtp_url="smtps://gaul@mail-relay.apache.org"
+folder-hook imaps://gaul@gaul.org/jclouds* set smtp_url="smtps://gaul@mail-relay.apache.org"
 
 # Google contacts (manually update with goobook reload)
 set query_command="goobook query '%s'"
