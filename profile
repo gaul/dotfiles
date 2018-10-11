@@ -5,7 +5,7 @@ export BROWSER="firefox"
 export EDITOR="vim"
 # TODO: change work/go-workspace/ to work/ ?
 export GOPATH="$HOME/work/go-workspace"
-export JAVA_HOME="$HOME/bin/jdk"
+export HISTIGNORE=' *'
 export LESS="--IGNORE-CASE --RAW-CONTROL-CHARS"
 export MAILER="mutt"
 export NNTPSERVER="reader443.eternal-september.org"
