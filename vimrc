@@ -16,7 +16,7 @@ set showmatch                           " show [({})] matches
 set spellfile=~/.spellfile.add          " spell checking
 set tabstop=4                           " number of spaces for tab indents
 set tags=~/work/tags                    " tags for navigating source code
-set wildignore+=*.class,*.o,*.pdf,*.pyc " ignore binary files in tab complete
+set wildignore+=*.class,*.jpg,*.o,*.pdf,*.pyc " ignore binary files in tab complete
 
 let c_space_errors=1                    " highlight trailing whitespace
 let java_space_errors=1                 " highlight trailing whitespace
