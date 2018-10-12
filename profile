@@ -47,18 +47,8 @@ errno() {
             /usr/include/asm-generic/errno.h
 }
 
-flv_to_mp4() {
-    FILENAME=$1
-    ffmpeg -vcodec copy -acodec copy -i "${FILENAME}" "${FILENAME%.flv}.mp4"
-}
-
 fvim() {
     vim $(find . -name "$1")
-}
-
-# generate a random password excluding characters which look similar
-genpwd() {
-    openssl rand -base64 48
 }
 
 mount_gaulbackup() {
