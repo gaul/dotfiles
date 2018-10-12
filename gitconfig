@@ -10,3 +10,6 @@
 
 [alias]
 	branch-sorted-by-date=for-each-ref --sort='committerdate' --format="%(refname:short)" refs/heads/
+
+[fetch]
+	prune = true
