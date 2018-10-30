@@ -36,6 +36,8 @@ autocmd BufRead *.txt setlocal textwidth=80
 
 autocmd FileType java setlocal foldmarker=/**,*/ foldmethod=marker foldcolumn=0
 highlight Folded ctermbg=black ctermfg=darkgray
+highlight Search cterm=none ctermfg=black ctermbg=yellow
+highlight SpellBad cterm=none ctermfg=gray ctermbg=red
 
 syntax on
 
