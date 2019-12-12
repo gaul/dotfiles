@@ -48,7 +48,7 @@ errno() {
 }
 
 fvim() {
-    vim $(find . -name "$1")
+    vim $(find . -type f -name "$1")
 }
 
 mount_gaulbackup() {
