@@ -14,6 +14,7 @@ set shiftwidth=4                        " number of spaces for >>
 set showcmd                             " show information about commands
 set showmatch                           " show [({})] matches
 set spellfile=~/.spellfile.add          " spell checking
+set shiftround                          " indent to next shiftwidth
 set tabstop=4                           " number of spaces for tab indents
 set tags=~/work/tags                    " tags for navigating source code
 set wildignore+=*.class,*.jpg,*.o,*.pdf,*.pyc " ignore binary files in tab complete
