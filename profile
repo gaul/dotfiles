@@ -16,7 +16,7 @@ export WWW_HOME="http://google.com/"
 alias grep="grep --binary-files=without-match --color=auto --exclude=\*.svn-base --exclude=Entries --exclude-dir=.mypy_cache"
 alias ls="ls --color=auto"
 alias mvn="mvn --quiet"
-alias pmake="make --jobs=$(($(grep --count ^processor /proc/cpuinfo) + 1))"
+alias pmake="make --jobs=$(nproc)"
 
 # prompt colors
 LIGHT_YELLOW="\[\033[1;33m\]"
