@@ -3,7 +3,8 @@
 defscrollback 10000
 hardstatus off
 bind K kill
-bind k
+bind k      # K instead
 bind ^K
 bind ^G
 bind d      # ^D instead
+bind x      # disable password lock
